@@ -1,5 +1,6 @@
-import fs from 'node:fs/promises';
 
+
+import fs from 'node:fs/promises';
 import bodyParser from 'body-parser';
 import express from 'express';
 
@@ -65,5 +66,7 @@ app.use((req, res) => {
 
   res.status(404).json({ message: 'Not found' });
 });
+
+const port = process.env.PORT || 3001
 
 app.listen(3001);
